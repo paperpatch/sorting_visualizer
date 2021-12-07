@@ -1,4 +1,4 @@
-import SortingVisualizer from './SortingVisualizer/SortingVisualizer';
+import SortingVisualizer from './SortingAlgorithms/sortingVisualizer';
 import './App.css';
 
 function App() {
