@@ -1,3 +1,4 @@
+import React from 'react';
 import SortingVisualizer from './SortingVisualizer/sortingVisualizer';
 import './App.css';
 
