@@ -1,9 +1,10 @@
 import React from 'react';
+import {getMergeSortAnimations} from '../SortingAlgorithms/mergeSort.js';
 
 const NUMBER_OF_ARRY_BARS = 100;
 
 const PRIMARY_COLOR = 'blue';
-const SECONDARY_COLOR = 'red';
+// const SECONDARY_COLOR = 'red';
 
 export default class SortingVisualizer extends React.Component {
   constructor(props) {
@@ -26,13 +27,23 @@ export default class SortingVisualizer extends React.Component {
     this.setState({array});
   }
 
-  mergeSort() {}
+  mergeSort() {
+    const animations = getMergeSortAnimations()
+  }
 
   quickSort() {}
 
   heapSort() {}
 
   bubbleSort() {}
+
+  insertionSort() {}
+
+  selectionSort() {}
+
+  radixSort() {}
+
+  bucketSort() {}
 
   render() {
     const {array} = this.state;
@@ -49,6 +60,7 @@ export default class SortingVisualizer extends React.Component {
             }}></div>
         ))}
         <button onClick={() => this.resetArray()}>Generate New Array</button>
+        <button onClick={() => this.mergeSort()}>Merge Sort</button>
       </div>
     )
   }
