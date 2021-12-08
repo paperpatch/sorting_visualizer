@@ -61,8 +61,8 @@ function doMerge(
   }
 }
 
-// Understanding Merge Sort
 /* 
+// Understanding Merge Sort
 
 const mergeSort = array => {
   if (array.length === 1) return array;
