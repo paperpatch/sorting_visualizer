@@ -8,30 +8,30 @@ export function getMergeSortAnimations(array) {
 
 function mergeSortHelper(
   mainArray,
-  startIndex,
-  endIndex,
+  startIdx,
+  endIdx,
   auxiliaryArray,
   animations,
 ) {
-  if (startIndex === endIndex) return;
-  const middleIndex = Math.floor((startIndex + endIndex) / 2);
-  mergeSortHelper(auxiliaryArray, startIndex, middleIndex, mainArray, animations);
-  mergeSortHelper(auxiliaryArray, middleIndex + 1, endIndex, mainArray, animations);
-  doMerge(mainArray, startIndex, middleIndex, endIndex, auxiliaryArray, animations);
+  if (startIdx === endIdx) return;
+  const middleIdx = Math.floor((startIdx + endIdx) / 2);
+  mergeSortHelper(auxiliaryArray, startIdx, middleIdx, mainArray, animations);
+  mergeSortHelper(auxiliaryArray, middleIdx + 1, endIdx, mainArray, animations);
+  doMerge(mainArray, startIdx, middleIdx, endIdx, auxiliaryArray, animations);
 }
 
 function doMerge(
   mainArray,
-  startIndex,
-  middleIndex,
-  endIndex,
+  startIdx,
+  middleIdx,
+  endIdx,
   auxiliaryArray,
   animations,
 ) {
-  let i = startIndex;
-  let j = middleIndex + 1;
-  let k = startIndex;
-  while (startIndex <= middleIndex && j <= endIndex) {
+  let i = startIdx;
+  let j = middleIdx + 1;
+  let k = startIdx;
+  while (i <= middleIdx && j <= endIdx) {
     // compare values. push once to change color
     animations.push([i, j]);
     // push second time to revert colors
@@ -47,13 +47,13 @@ function doMerge(
       mainArray[k++] = auxiliaryArray[j++];
     }
   }
-  while (i <= middleIndex) {
+  while (i <= middleIdx) {
     animations.push([i, i]);
     animations.push([i, i]);
     animations.push([k, auxiliaryArray[i]]);
     mainArray[k++] = auxiliaryArray[i++];
   }
-  while (j <= endIndex) {
+  while (j <= endIdx) {
     animations.push([j, j]);
     animations.push([j, j]);
     animations.push([k, auxiliaryArray[j]]);
