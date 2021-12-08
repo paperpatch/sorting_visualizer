@@ -1,41 +1,70 @@
 export function getQuickSortAnimations(array) {
   const animations = [];
   if (array.length <= 1) return array;
-  const auxiliaryArray = array.slice();
-  quickSortHelper(array, 0, array.length - 1, auxiliaryArray, animations);
+  quickSortHelper(array, animations);
   return animations;
 }
 
-function quickSortHelper(
-  mainArray,
-  startIdx, // left
-  endIdx, // right
-  auxiliaryArray,
-  animations,
+function quickSortHelper (
+  array,
+  animations
 ) {
-  let i = startIdx;
-  let j = endIdx - 1;
-  let size = endIdx - startIdx;
+  if (array.length === 1) {
+    return array;
+  }
 
-  if (size > 1) {
-    let pivot = mainArray[Math.floor(Math.random() % size + 1)];
-    while (i < j) {
-      while (mainArray[i] > pivot && j > 1) {
-        j--;
-      }
-      while(mainArray[i] < pivot && i <= j) {
-        i++;
-      }
-      if (i < j) {
-        swap(mainArray[i], mainArray[j]);
-        i++;
-      }
-      if (i < j) {
-        swap(mainArray[i], mainArray[j]);
-        j++;
-      }
+  const pivot = array[array.length - 1] // selects the last element of array for pivot
+  const leftArray = [];
+  const rightArray = [];
+
+  for (let i =0; i < array.length - 1; i++) {
+    if (array[i] < pivot) {
+      animations.push([i, array[i]]);
+      animations.push([i, array[i]]);
+      leftArray.push(array[i]);
+    } else {
+      animations.push([i, array[i]]);
+      animations.push([i, array[i]]);
+      rightArray.push(array[i]);
     }
-    quickSortHelper(mainArray, startIdx, i);
-    quickSortHelper(mainArray, j, right);
+  }
+
+  if (leftArray.length > 0 && rightArray.length > 0) {
+    return [...quickSortHelper(leftArray), pivot, ...quickSortHelper(rightArray)];
+  } else if (leftArray.length > 0 ) {
+    return [...quickSortHelper(leftArray), pivot];
+  } else { // the last condition being 'else if (rightArray.length > 0 )'
+    return [pivot, ...quickSortHelper(rightArray)];
   }
 }
+
+
+/* Understanding quicksort
+
+function quickSort (array) {
+  if (array.length === 1) {
+    return array;
+  }
+
+  const pivot = array[array.length - 1] // select the last one or whichever you choose from the array
+  const leftArray = [];
+  const rightArray = [];
+
+  for (let i =0; i < array.length - 1; i++) {
+    if (array[i] < pivot) {
+      leftArray.push(array[i]);
+    } else {
+      rightArray.push(array[i]);
+    }
+  }
+
+  if (leftArray.length > 0 && rightArray.length > 0) {
+    return [...quickSort(leftArray), pivot, ...quickSort(rightArray)];
+  } else if (leftArray.length > 0 ) {
+    return [...quickSort(leftArray), pivot];
+  } else { // the last condition being 'else if (rightArray.length > 0 )'
+    return [pivot, ...quickSort(rightArray)];
+  }
+}
+ */
+
