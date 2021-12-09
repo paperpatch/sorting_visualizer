@@ -86,7 +86,10 @@ const mergeSort = array => {
   }
   // checks if all numbers in array were sorted. This happens when comparing odd number arrays. Ex: Compare [3, 5] and [4].
   // The leftover number tends to be the highest number pushed.
-  while (i < firstHalf.length) sortedArray.push(firstHalf[i++]);
+  while (i < firstHalf.length) {
+    sortedArray.push(firstHalf[i]);
+    i++;
+    };
   while (j < secondHalf.length) sortedArray.push(secondHalf[j++]);
 
   return sortedArray;
