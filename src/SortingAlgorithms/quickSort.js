@@ -19,12 +19,12 @@ function quickSortHelper (
 
   for (let i =0; i < array.length - 1; i++) {
     if (array[i] < pivot) {
-      animations.push([i, array[i]]);
-      animations.push([i, array[i]]);
+      animations.push(pivot, array[i]);
+      animations.push(pivot, array[i]);
       leftArray.push(array[i]);
     } else {
-      animations.push([i, array[i]]);
-      animations.push([i, array[i]]);
+      animations.push(pivot, array[i]);
+      animations.push(pivot, array[i]);
       rightArray.push(array[i]);
     }
   }

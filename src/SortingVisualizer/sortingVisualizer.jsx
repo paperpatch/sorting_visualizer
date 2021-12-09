@@ -1,5 +1,6 @@
 import React from 'react';
-import {getMergeSortAnimations} from '../SortingAlgorithms/mergeSort.js';
+import { getMergeSortAnimations } from '../SortingAlgorithms/mergeSort.js';
+import { getQuickSortAnimations } from '../SortingAlgorithms/quickSort.js';
 import './sortingVisualizer.css';
 
 const NUMBER_OF_ARRAY_BARS = 100;
@@ -54,7 +55,7 @@ export default class SortingVisualizer extends React.Component {
   }
 
   quickSort() {
-    const animations = getMergeSortAnimations(this.state.array);
+    const animations = getQuickSortAnimations(this.state.array);
     for (let i = 0; i < animations.length; i++) {
       const arrayBars = document.getElementsByClassName('array-bar');
       const isColorChange = i % 3 !== 2;
