@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import NavBar from './components/NavBar'
-import Controller from './'
-import Main from './components/Main';
-import Footer from './'
-
-import './App.css';
+import Controller from './components/Controller'
+import Main from './components/AlgoDisplay';
+import Footer from './components/Footer'
 
 const Container = styled.div`
   margin: 0 10px;
