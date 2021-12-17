@@ -1,4 +1,4 @@
-import { changeColor, resetColor, swap, compare } from '../SortingVisualizer/sortingVisualizer'
+import { changeColor, resetColor, swap, compare } from '../components/visualizer/sortingVisualizer'
 
 const BLUE = 'blue';
 const RED = 'red';

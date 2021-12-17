@@ -1,6 +1,6 @@
 import React from 'react';
-import { getMergeSortAnimations } from '../SortingAlgorithms/mergeSort.js';
-import { getQuickSortAnimations } from '../SortingAlgorithms/quickSort.js';
+import { getMergeSortAnimations } from '../../sortFunctions/mergeSort.js';
+import { getQuickSortAnimations } from '../../sortFunctions/quickSort.js';
 import './sortingVisualizer.css';
 
 const NUMBER_OF_ARRAY_BARS = 100;
