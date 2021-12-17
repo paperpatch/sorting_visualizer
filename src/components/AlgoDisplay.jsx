@@ -1,6 +1,7 @@
 import React from "react";
-import styled from 'styled-components';
-import sortingAlgorithms from "../common/config";
+import styled from "styled-components";
+import { sortingAlgorithms } from "../common/config";
+import { useControls, useData } from "../common/store";
 
 const FlexWrap = styled.div`
   display: flex;
