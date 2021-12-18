@@ -48,6 +48,7 @@ export function AlgoDisplay() {
 
   useEffect(() => {
     resetSorting();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [algorithm]);
 
   if (sortingArray.length === 0)
