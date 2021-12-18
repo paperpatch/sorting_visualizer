@@ -7,3 +7,4 @@
 `npm i react-icons`
 `npm i react-scripts`
 `npm i web-vitals`
+`npm i @emotion/react @emotion/styled`
