@@ -10,7 +10,7 @@ import {
 import { useControls } from "../../common/store";
 
 let swapTime = useControls.getState().swapTime;
-useControls.subscribe(
+useControls.subscribeWithSelector(
   (time) => (swapTime = time),
   (state) => state.swapTime
 );
