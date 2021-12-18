@@ -1,7 +1,10 @@
-import React from "react";
+
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { sortingAlgorithms } from "../common/config";
 import { useControls, useData } from "../common/store";
+import shallow from "zustand/shallow";
+import { SortManager } from "./visualizer/SortManager";
 
 const FlexWrap = styled.div`
   display: flex;
@@ -38,6 +41,45 @@ function TabPanel(props) {
 export function AlgoDisplay() {
   const resetSorting = useControls((state) => state.resetSorting);
 
+  const [sortingArray, algorithm] = useData(
+    (state) => [state.sortingArray, state.algorithm],
+    shallow
+  );
 
+  useEffect(() => {
+    resetSorting();
+  }, [algorithm]);
 
+  if (sortingArray.length === 0)
+    return (
+      <h3 style={flexCenter}>
+        Please enter input array or use generate button
+      </h3>
+    );
+
+  return (
+    <div style={flexCenter}>
+      {sortingAlgorithms.map((algoInfo, idx) => (
+        <TabPanel value={algorithm} index={idx} key={algoInfo.name}>
+          <SortManager
+            array={sortingArray}
+            sortFunction={algoInfo.component}
+            sortingAlgorithmName={algoInfo.name}
+          />
+        </TabPanel>
+      ))}
+      <TabPanel value={algorithm} index={sortingAlgorithms.length}>
+        <FlexWrap>
+          {sortingAlgorithms.map((algoInfo) => (
+            <SortManager
+              array={sortingArray}
+              sortFunction={algoInfo.component}
+              sortingAlgorithmName={algoInfo.name}
+              key={algoInfo.name}
+            />
+          ))}
+        </FlexWrap>
+      </TabPanel>
+    </div>
+  );
 }
