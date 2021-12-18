@@ -44,6 +44,7 @@ const ExecutionBar = styled.div`
 `;
 
 export function Controller() {
+  
   const [isPausing, setIsPausing] = useState(false);
 
   const [progress, speed] = useControls(

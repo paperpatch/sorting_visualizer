@@ -1,6 +1,6 @@
 import { getScreenWidth } from "./helper";
-import { mergeSort } from '../sortFunctions/bubbleSort';
-import { getQuickSortAnimations } from "../sortFunctions/quickSort";
+import { mergeSort } from '../sortFunctions/mergeSort';
+import { quickSort } from "../sortFunctions/quickSort";
 
 // colors setting
 export const comparisonColor = "pink";
@@ -16,7 +16,9 @@ export let compareTime = 500;
 export let sortingArray = initArrayForScreenSize();
 
 export const sortingAlgorithms = [
-  {component: getQuickSortAnimations, title: "Quick", name: "quickSort" },
+  { component: mergeSort, title: "Merge", name: "mergeSort" },
+  { component: quickSort, title: "Quick", name: "quickSort" },
+
 ];
 
 function initArrayForScreenSize() {

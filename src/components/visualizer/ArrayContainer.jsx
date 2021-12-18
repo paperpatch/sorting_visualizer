@@ -5,7 +5,7 @@ import {
   swapColor,
   sortedColor,
   pivotColor,
-} from "../../common/store";
+} from "../../common/config";
 import { useControls } from "../../common/store";
 
 import {
