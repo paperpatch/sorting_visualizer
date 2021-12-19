@@ -16,7 +16,7 @@ import {
 } from "../../common/styles";
 
 let swapTime = useControls.getState().swapTime;
-useControls.subscribeWithSelector(
+useControls.subscribe(
   (time) => (swapTime = time),
   (state) => state.swapTime
 );

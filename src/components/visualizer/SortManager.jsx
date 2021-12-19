@@ -12,7 +12,7 @@ import { useControls, useData } from "../../common/store";
 let compareTime = useControls.getState().compareTime;
 let swapTime = useControls.getState().swapTime;
 
-useControls.subscribeWithSelector(
+useControls.subscribe(
   ([cTime, sTime]) => {
     compareTime = cTime;
     swapTime = sTime;
@@ -78,7 +78,7 @@ export const SortManager = React.memo(function ({
 
   useEffect(() => {
     progress.current = useControls.getState().progress;
-    useControls.subscribeWithSelector(
+    useControls.subscribe(
       (value) => {
         progress.current = value;
 
