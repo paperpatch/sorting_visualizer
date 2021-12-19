@@ -16,7 +16,7 @@ export async function* mergeSort( //function* makes it a generator function. sol
   const left = array.slice(0, middle);
   const right = array.slice(middle);
 
-  const arr = yield* await mergeSort(
+  const arr = yield* await merge(
     yield* await mergeSort(left, combine, highlight, markSort, offSet, false),
     yield* await mergeSort(right, combine, highlight, markSort, offSet + middle, false),
     offSet,
