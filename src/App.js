@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { NavBar } from './components/NavBar'
-import { Controller } from './components/Controller'
-import { AlgoDisplay } from './components/AlgoDisplay';
-import { Footer }from './components/Footer'
+import React from "react";
+import styled from "styled-components";
+import { NavBar } from "./components/NavBar";
+import { Footer } from "./components/Footer";
+import { Controller } from "./components/Controller";
+import { AlgoDisplay } from "./components/AlgoDisplay";
 
 const Container = styled.div`
   margin: 0 10px;
@@ -15,12 +15,10 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      <div className="App">
-        <NavBar />
-        <Controller />
-        <AlgoDisplay/>
-        <Footer />
-      </div>
+      <NavBar />
+      <Controller />
+      <AlgoDisplay />
+      <Footer />
     </Container>
   );
 }
