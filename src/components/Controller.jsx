@@ -44,7 +44,7 @@ const ExecutionBar = styled.div`
 `;
 
 export function Controller() {
-  
+
   const [isPausing, setIsPausing] = useState(false);
 
   const [progress, speed] = useControls(
@@ -101,6 +101,7 @@ export function Controller() {
     if(isPausing)
       return disabledPauseElement;
 
+    // eslint-disable-next-line default-case
     switch (progress) {
       case "reset":
         return startElement;
@@ -119,19 +120,21 @@ export function Controller() {
         <Button
           variant="contained"
           color="primary"
-          onClick = {generate}
-          ></Button>
+          onClick={generate}
+        >
+          Generate
+        </Button>
 
-          <TextField
-           id="outlined-basic"
-           label="Input"
-           variant="outlined"
-           onChange={(event) => arrayDataChangeHandler(event.target.value)}
-           value={arrayInput}
-           size="small"
-           width="100px"
-           style={{ flexGrow: 1, margin: '0 10px' }} 
-          />
+        <TextField
+          id="outlined-basic"
+          label="Input"
+          variant="outlined"
+          onChange={(event) => arrayDataChangeHandler(event.target.value)}
+          value={arrayInput}
+          size="small"
+          width="100px"
+          style={{ flexGrow: 1, margin: '0 10px' }} 
+        />
       </ArrayBar>
       <ExecutionBar>
         <Slider
