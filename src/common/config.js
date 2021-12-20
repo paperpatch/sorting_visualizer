@@ -16,8 +16,8 @@ export let compareTime = 500;
 export let sortingArray = initArrayForScreenSize();
 
 export const sortingAlgorithms = [
-  { component: mergeSort, title: "Merge", name: "mergeSort" },
-  { component: quickSort, title: "Quick", name: "quickSort" },
+  { component: mergeSort, title: "Merge", name: "Merge Sort" },
+  { component: quickSort, title: "Quick", name: "Quick Sort" },
 
 ];
 
