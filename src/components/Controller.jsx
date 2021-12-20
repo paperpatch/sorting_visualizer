@@ -101,7 +101,6 @@ export function Controller() {
     if(isPausing)
       return disabledPauseElement;
 
-    // eslint-disable-next-line default-case
     switch (progress) {
       case "reset":
         return startElement;
