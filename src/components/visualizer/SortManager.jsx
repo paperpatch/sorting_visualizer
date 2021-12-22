@@ -71,7 +71,7 @@ export const SortManager = React.memo(function ({
     setHighlightedIndices([-1, -1]);
 
     sortProgressIterator.current =
-      sortingAlgorithmName === "MergeSort"
+      sortingAlgorithmName === "Merge Sort"
         ? await sortFunction(algoArray.current, combine, highlight, markSort)
         : await sortFunction(algoArray.current, swap, highlight, markSort);
   }
@@ -118,7 +118,7 @@ export const SortManager = React.memo(function ({
       setHighlightedIndices([-1, -1]);
       markSortingDone();
     }
-  };
+  }
 
   async function swap(i, j) {
     let temp = algoArray.current[i];
@@ -129,7 +129,7 @@ export const SortManager = React.memo(function ({
     pivot.current = -1;
     swapCount.current += 1;
     await delay(swapTime);
-  };
+  }
 
   async function combine(source, destination) {
     if (source !== destination) {
@@ -138,7 +138,7 @@ export const SortManager = React.memo(function ({
       setSwapIndices([source, destination]);
       await delay(swapTime);
     }
-  };
+  }
 
   async function highlight(indices, p) {
     setSwapIndices([-1, -1]);
@@ -146,7 +146,7 @@ export const SortManager = React.memo(function ({
     pivot.current = p;
     setHighlightedIndices(indices);
     await delay(compareTime);
-  };
+  }
 
   function markSort(...indices) {
     sortedIndices.current.push(...indices);

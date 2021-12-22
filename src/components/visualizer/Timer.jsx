@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useControls } from "../../common/store"
+import { useControls } from "../../common/store";
 
 export function Timer({ isAlgorithmOver }) {
   const [minutes, setMinutes] = useState(0);
@@ -36,5 +36,7 @@ export function Timer({ isAlgorithmOver }) {
     }
   }, [seconds]);
 
-  return `${minutes.toString().padStart(2, 0)}:${seconds.toString().padStart(2, 0)}:${milliSeconds} s`;
+  return `${minutes.toString().padStart(2, 0)}:${seconds
+    .toString()
+    .padStart(2, 0)}:${milliSeconds} s`;
 }

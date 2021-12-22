@@ -1,5 +1,5 @@
 import { getScreenWidth } from "./helper";
-import { mergeSort } from '../sortFunctions/mergeSort';
+import { mergeSort } from "../sortFunctions/mergeSort";
 import { quickSort } from "../sortFunctions/quickSort";
 
 // colors setting

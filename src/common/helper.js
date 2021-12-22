@@ -11,8 +11,8 @@ export function convertInputToArrayString(string) {
 export function convertArrayStringToArray(string) {
   return string
     .split(",")
-    .filter(x => x !== "")
-    .map(x => +x);
+    .filter(v => v !== "")
+    .map(v => +v);
 }
 
 export function getRandomArray(length = generateRandomNumberInRange(5, 30)) {

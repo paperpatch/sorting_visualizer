@@ -1,4 +1,4 @@
-export async function* mergeSort( //function* makes it a generator function. solves callback hell and inversion of control
+export async function* mergeSort(
   array,
   combine,
   highlight,
@@ -25,7 +25,7 @@ export async function* mergeSort( //function* makes it a generator function. sol
     markSort
   );
   return arr;
-  
+
   async function* merge(left, right, off1, off2, finalMerge = false, markSort) {
     let result = [];
     let leftIndex = 0;
@@ -38,14 +38,14 @@ export async function* mergeSort( //function* makes it a generator function. sol
           off1 + leftIndex + rightIndex,
           off1 + result.length,
         );
-        if (finalMerge)
+        if(finalMerge)
           yield await markSort(off1 + result.length);
         result.push(left[leftIndex]);
         leftIndex++;
       } else {
         yield await highlight([off1 + leftIndex + rightIndex, off2 + rightIndex]);
         yield await combine(off2 + rightIndex, off1 + result.length);
-        if (finalMerge)
+        if(finalMerge)
           yield await markSort(off1 + result.length);
         result.push(right[rightIndex]);
         rightIndex++;
