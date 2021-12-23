@@ -54,7 +54,7 @@ export const SortManager = React.memo(function ({
   const swapCount = useRef(0);
   const comparisonCount = useRef(0);
   const isAlgorithmOver = useRef(false);
-  const isComponentUnmounted = useRef(false);
+  const isComponentUnMounted = useRef(false);
 
   const markSortingDone = useControls((state) => state.markSortingDone);
   const progress = useRef("");
@@ -71,7 +71,7 @@ export const SortManager = React.memo(function ({
     setHighlightedIndices([-1, -1]);
 
     sortProgressIterator.current =
-      sortingAlgorithmName === "Merge Sort"
+      sortingAlgorithmName === "MergeSort"
         ? await sortFunction(algoArray.current, combine, highlight, markSort)
         : await sortFunction(algoArray.current, swap, highlight, markSort);
   }
@@ -89,7 +89,7 @@ export const SortManager = React.memo(function ({
     );
 
     return () => {
-      isComponentUnmounted.current = true;
+      isComponentUnMounted.current = true;
     };
   }, []);
 
@@ -102,12 +102,12 @@ export const SortManager = React.memo(function ({
     while (
       !completion?.done &&
       progress.current === "start" &&
-      !isComponentUnmounted.current
+      !isComponentUnMounted.current
     ) {
       completion = await sortProgressIterator.current?.next();
     }
 
-    if (isComponentUnmounted.current) {
+    if (isComponentUnMounted.current) {
       return;
     }
 
