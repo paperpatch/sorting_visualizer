@@ -1,4 +1,4 @@
-export async function* HeapSort(array, swap, highlight, markSort) {
+export async function* heapSort(array, swap, highlight, markSort) {
   let arrLength = array.length;
   for (let i = Math.floor(arrLength / 2) - 1; i >= 0; i--) {
     yield* await maxHeap(i);

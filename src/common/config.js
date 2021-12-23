@@ -1,10 +1,10 @@
 import { getScreenWidth } from "./helper";
 import { mergeSort } from "../sortFunctions/mergeSort";
 import { quickSort } from "../sortFunctions/quickSort";
-import { selectionSort } from "../sortFunctions/SelectionSort";
-import { heapSort } from "../sortFunctions/HeapSort.js";
-import { insertionSort } from "../sortFunctions/InsertionSort";
-import { bubbleSort } from "../sortFunctions/BubbleSort";
+import { selectionSort } from "../sortFunctions/selectionSort";
+import { heapSort } from "../sortFunctions/heapSort.js";
+import { insertionSort } from "../sortFunctions/insertionSort";
+import { bubbleSort } from "../sortFunctions/bubbleSort";
 
 // colors setting
 export const comparisonColor = "pink";
