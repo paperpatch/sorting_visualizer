@@ -1,79 +1,48 @@
 # Sorting Visualizer
+![Github license](http://img.shields.io/badge/license-MIT-blue.svg)
 
-`npm i zustand`
-`npm i @material-ui/core@next`
-`npm i --save styled-components` 
-`npm i react-use`
-`npm i react-icons`
-`npm i react-scripts`
-`npm i web-vitals`
-`npm i @emotion/react @emotion/styled`
+A [Sorting Visualizer](https://trackend-project.herokuapp.com/) project that displays various sorting algorithms. Users are able to generate their own input of arrays to test out algorithms.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Screenshot](./public/images/screenshots/trackend-login.png)
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+* [Setup](#setup)
+* [Usage](#usage)
+* [Deployment](#deployment)
+* [Contributing](#contributing)
+* [License](#license)
 
-### `npm start`
+## Setup
+:floppy_disk:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Type `npm install` to download the dependencies and `npm start` to run the application.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
 
-### `npm test`
+:computer:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Go to [Sorting Visualizer](https://trackend-project.herokuapp.com/) and navigate through Sorting Algorithm choices of Merge, Quick, Selection, Heap, Insertion and Bubble Sort.
 
-### `npm run build`
+Either randomly generate inputs by clicking on the `Generate` button or manually insert your own inputs.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Users are able to hit the pause or play button to stop or start the algorithm.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Server is deployed on Heroku. See deployed link to experience the sorting visualizer.
 
-### `npm run eject`
+[Deployed link to Sorting Algorithms Visualizer](#)
+`Work in progress`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+:octocat:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[paperpatch](https://github.com/paperpatch) </br>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
 
-## Learn More
+:receipt:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under MIT.
