@@ -22,7 +22,7 @@ Type `npm install` to download the dependencies and `npm start` to run the appli
 
 :computer:
 
-Go to [Sorting Visualizer](https://trackend-project.herokuapp.com/) and navigate through Sorting Algorithm choices of Merge, Quick, Selection, Heap, Insertion and Bubble Sort.
+Go to [Sorting Visualizer](#) and navigate through Sorting Algorithm choices of Merge, Quick, Selection, Heap, Insertion and Bubble Sort.
 
 Either randomly generate inputs by clicking on the `Generate` button or manually insert your own inputs.
 

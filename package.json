@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "sorting_visualizer",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://paperpatch.github.io/sorting_visualizer/",
@@ -28,12 +28,6 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
