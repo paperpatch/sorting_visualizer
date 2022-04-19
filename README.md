@@ -1,7 +1,7 @@
 # Sorting Visualizer
 ![Github license](http://img.shields.io/badge/license-MIT-blue.svg)
 
-A [Sorting Visualizer](https://trackend-project.herokuapp.com/) project that displays various sorting algorithms. Users are able to generate their own input of arrays to test out algorithms.
+A [Sorting Visualizer](https://paperpatch.github.io/sorting_visualizer/) project that displays various sorting algorithms. Users are able to generate their own input of arrays to test out algorithms.
 
 ![Screenshot](./src/assets/images/screenshot.png)
 
