@@ -3,6 +3,8 @@
 
 A [Sorting Visualizer](https://paperpatch.github.io/sorting_visualizer/) project that displays various sorting algorithms. Users are able to generate their own input of arrays to test out algorithms.
 
+The purpose of this repository is to learn how popular sorting algorithms work by visualization.
+
 ![Screenshot](./src/assets/images/screenshot.png)
 
 ## Table of Contents
@@ -41,9 +43,14 @@ Type `npm deploy` if you're planning on hosting on gh-pages.
 
 Go to [Sorting Visualizer](https://paperpatch.github.io/sorting_visualizer/) and navigate through Sorting Algorithm choices of Merge, Quick, Selection, Heap, Insertion and Bubble Sort.
 
-Either randomly generate inputs by clicking on the `Generate` button or manually insert your own inputs.
+Features:
+  - Generate array of inputs by clicking on the `Generate` button or manually inserting your own inputs
+  - Hit the pause, play, and reset button of the execution.
+  - Alter the speed of execution.
+  - Displays total swaps required per sorting algorithm.
+  - Displays total comparisons made per sorting algorithm.
+  - Displays time taken (approximate by comparisons) per sorting algorithm.
 
-Users are able to hit the pause or play button to stop or start the algorithm.
 
 ## Deployment
 
