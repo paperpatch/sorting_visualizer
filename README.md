@@ -35,7 +35,7 @@ This app uses the following npm:
 
 Type `npm install` to download the dependencies and `npm start` to run the application.
 
-Type `npm deploy` if you're planning on hosting on gh-pages.
+Type `npm run deploy` if you're planning on hosting on gh-pages.
 
 ## Usage
 
