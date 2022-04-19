@@ -71,7 +71,7 @@ export const SortManager = React.memo(function ({
     setHighlightedIndices([-1, -1]);
 
     sortProgressIterator.current =
-      sortingAlgorithmName === "MergeSort"
+      sortingAlgorithmName === "Merge Sort"
         ? await sortFunction(algoArray.current, combine, highlight, markSort)
         : await sortFunction(algoArray.current, swap, highlight, markSort);
   }
@@ -81,7 +81,7 @@ export const SortManager = React.memo(function ({
     useControls.subscribe(
       (value) => {
         progress.current = value;
-
+        
         if (progress.current === "start") runAlgo();
         if (progress.current === "reset") reset();
       },
@@ -185,7 +185,7 @@ export const SortManager = React.memo(function ({
           </strong>
         </TimerDiv>
       </AlgoHeaderBar>
-      {sortingAlgorithmName === "MergeSort" ? mergeContainer : arrayContainer}
+      {sortingAlgorithmName === "Merge Sort" ? mergeContainer : arrayContainer}
       <InfoFooter
         swapCount={swapCount.current}
         comparisonCount={comparisonCount.current}
