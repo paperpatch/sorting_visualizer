@@ -3,7 +3,7 @@
 
 A [Sorting Visualizer](https://trackend-project.herokuapp.com/) project that displays various sorting algorithms. Users are able to generate their own input of arrays to test out algorithms.
 
-![Screenshot](./public/images/screenshots/trackend-login.png)
+![Screenshot](./src/assets/images/screenshot.png)
 
 ## Table of Contents
 
@@ -16,13 +16,30 @@ A [Sorting Visualizer](https://trackend-project.herokuapp.com/) project that dis
 ## Setup
 :floppy_disk:
 
+This app uses the following npm:
+- [zustand](https://www.npmjs.com/package/zustand)
+  - A small, fast and scalable bearbones state-management solution using simplified flux principles. Has a comfy api based on hooks, isn't boilerplatey or opinionated.
+  - Zustand uses an external store, and it provides some Hooks to connect the external.
+- [@emotion/react](https://www.npmjs.com/package/@emotion/react)
+  - Simple styling in React
+- [@emotion/styled](https://www.npmjs.com/package/@emotion/styled)
+  - The styled API for @emotion/react
+- [@material-ui/core](https://www.npmjs.com/package/@material-ui/core)
+  [@material-ui/styles](https://www.npmjs.com/package/@material-ui/core)
+  [@material-ui/system](https://www.npmjs.com/package/@material-ui/core)
+  - Material-UI components
+- [gh-pages](https://www.npmjs.com/package/gh-pages)
+  - Publish files to a gh-pages branch on GitHub (or any other branch anywhere else).
+
 Type `npm install` to download the dependencies and `npm start` to run the application.
+
+Type `npm deploy` if you're planning on hosting on gh-pages.
 
 ## Usage
 
 :computer:
 
-Go to [Sorting Visualizer](#) and navigate through Sorting Algorithm choices of Merge, Quick, Selection, Heap, Insertion and Bubble Sort.
+Go to [Sorting Visualizer](https://paperpatch.github.io/sorting_visualizer/) and navigate through Sorting Algorithm choices of Merge, Quick, Selection, Heap, Insertion and Bubble Sort.
 
 Either randomly generate inputs by clicking on the `Generate` button or manually insert your own inputs.
 
@@ -30,10 +47,9 @@ Users are able to hit the pause or play button to stop or start the algorithm.
 
 ## Deployment
 
-Server is deployed on Heroku. See deployed link to experience the sorting visualizer.
+Server is deployed on gh-pages. See deployed link to experience the sorting visualizer.
 
-[Deployed link to Sorting Algorithms Visualizer](#)
-`Work in progress`
+[Deployed link to Sorting Algorithms Visualizer](https://paperpatch.github.io/sorting_visualizer/)
 
 ## Contributing
 
