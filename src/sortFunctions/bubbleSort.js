@@ -8,7 +8,7 @@ export async function* bubbleSort(array, swap, highlight, marksort) {
       }
     }
 
-    marksort(j);
+    marksort(i);
     yield;
   }
 }
