@@ -14,7 +14,7 @@ export async function* bubbleSort(array, swap, highlight, marksort) {
 }
 
 /*
-// Understanding Bubble Sort
+Understanding Bubble Sort
 
 const bubbleSort = (arr) => {
   for (let i = 0; i < arr.length - 1; i++) {
@@ -27,22 +27,21 @@ const bubbleSort = (arr) => {
   return arr;
 };
 
-// Alternative Approach
+  // Alternative Approach
 
-const bubbleSort = (arr) => {
-  let sorted = false;
+  const bubbleSort = (arr) => {
+    let sorted = false;
 
-  while (!sorted) {
-    sorted = true;
+    while (!sorted) {
+      sorted = true;
 
-    for (let i = 0; i < arr.length - 1; i++) {
-      // compare arr[i] to arr[i+1]
-      // swap places if needed
-      // if swapped, set sorted = false to run while loop again
+      for (let i = 0; i < arr.length - 1; i++) {
+        // compare arr[i] to arr[i+1]
+        // swap places if needed
+        // if swapped, set sorted = false to run while loop again
+      }
     }
-  }
 
-  return arr;
-};
-
+    return arr;
+  };
 */

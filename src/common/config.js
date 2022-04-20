@@ -1,10 +1,18 @@
 import { getScreenWidth } from "./helper";
+
 import { mergeSort } from "../sortFunctions/mergeSort";
 import { quickSort } from "../sortFunctions/quickSort";
 import { selectionSort } from "../sortFunctions/selectionSort";
-import { heapSort } from "../sortFunctions/heapSort.js";
+import { heapSort } from "../sortFunctions/heapSort";
 import { insertionSort } from "../sortFunctions/insertionSort";
 import { bubbleSort } from "../sortFunctions/bubbleSort";
+
+import { mergeInfo } from "../sortInfo/mergeInfo";
+import { quickInfo } from "../sortInfo/quickInfo";
+import { selectionInfo } from "../sortInfo/selectionInfo";
+import { heapInfo } from "../sortInfo/heapInfo";
+import { insertionInfo } from "../sortInfo/insertionInfo";
+import { bubbleInfo } from "../sortInfo/bubbleInfo";
 
 // colors setting
 export const comparisonColor = "pink";
@@ -27,6 +35,15 @@ export const sortingAlgorithms = [
   { component: insertionSort, title: "Insertion", name: "Insertion Sort" },
   { component: bubbleSort, title: "Bubble", name: "Bubble Sort" },
 ];
+
+export const infoAlgorithms = [
+  { component: mergeInfo, title: "Merge", name: "Merge Info" },
+  { component: quickInfo, title: "Quick", name: "Quick Info" },
+  { component: selectionInfo, title: "Selection", name: "Selection Info" },
+  { component: heapInfo, title: "Heap", name: "Heap Info" },
+  { component: insertionInfo, title: "Insertion", name: "Insertion Info" },
+  { component: bubbleInfo, title: "Bubble", name: "Bubble Info" },
+]
 
 function initArrayForScreenSize() {
   const screenSize = getScreenWidth();
